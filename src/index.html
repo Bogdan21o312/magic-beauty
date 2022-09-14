@@ -1,17 +1,79 @@
 <!DOCTYPE html>
 <html lang="ua">
-	@@include('html/_head.htm',{
-	"title":"Home"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-				fkldklsadfdsaf
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"Home"
+})
+<body>
+<div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+        <div class="services">
+            <div class="services__container">
+                <h2 class="services__title">Послуги салону краси</h2>
+                <div class="services__gallery block-gallery">
+                    <div class="block-gallery__items">
+                        <a href="#" class="block-gallery__item">
+                            <div class="block-gallery__image">
+                                <img src="img/permanent-makeup.jpg" alt="Image">
+                                <div class="block-gallery__image_txt">
+                                    <div class="block-gallery__title">Перманентний макіяж</div>
+                                    <div class="block-gallery__sub-title">Детальніше</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block-gallery__item">
+                            <div class="block-gallery__image">
+                                <img src="img/manicure.webp" alt="Image">
+                                <div class="block-gallery__image_txt">
+                                    <div class="block-gallery__title">Манікюр</div>
+                                    <div class="block-gallery__sub-title">Детальніше</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block-gallery__item">
+                            <div class="block-gallery__image">
+                                <img src="img/eyelashes.jpg" alt="Image">
+                                <div class="block-gallery__image_txt">
+                                    <div class="block-gallery__title">Вії</div>
+                                    <div class="block-gallery__sub-title">Детальніше</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block-gallery__item">
+                            <div class="block-gallery__image">
+                                <img src="img/eyebrows.jpg" alt="Image">
+                                <div class="block-gallery__image_txt">
+                                    <div class="block-gallery__title">Брови</div>
+                                    <div class="block-gallery__sub-title">Детальніше</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block-gallery__item">
+                            <div class="block-gallery__image">
+                                <img src="img/sugaring.jpg" alt="Image">
+                                <div class="block-gallery__image_txt">
+                                    <div class="block-gallery__title">Шугаринг</div>
+                                    <div class="block-gallery__sub-title">Детальніше</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block-gallery__item">
+                            <div class="block-gallery__image">
+                                <img src="img/pedicure-02.jpg" alt="Image">
+                                <div class="block-gallery__image_txt">
+                                    <div class="block-gallery__title">Педикюр</div>
+                                    <div class="block-gallery__sub-title">Детальніше</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('html/_footer.htm',{})
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
 </html>

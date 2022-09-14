@@ -1,3 +1,75 @@
 //====================================================================================================
 
+.services {
+
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 30, 20);
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 50, 20);
+  }
+
+  &__gallery {
+  }
+}
+
+.block-gallery {
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: rem(10);
+    @media (max-width: em(1460)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(800)) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+
+    &_txt {
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+    }
+
+    img {
+      box-shadow: 0 rem(20) rem(40) rgba(0, 0, 0, 0.18);
+      @media (any-hover: hover) {
+        &:hover {
+          transform: scale(1.01);
+        }
+      }
+      @media (max-width: em(1460)) {
+        width: 100%;
+      }
+      width: 470px;
+      @include adaptiveValue("height", 400, 100);
+      @media (max-width: em(800)) {
+        height: 100%;
+      }
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 35, 25);
+    letter-spacing: 0.17rem;
+    margin-bottom: rem(10);
+  }
+
+  &__sub-title {
+    @include adaptiveValue("font-size", 25, 15);
+  }
+}
+
 //====================================================================================================
