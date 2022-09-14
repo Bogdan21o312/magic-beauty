@@ -221,3 +221,30 @@
 }
 
 //====================================================================================================
+
+.certificate {
+  @include adaptiveValue("margin-top", 50, 25);
+  @include adaptiveValue("margin-bottom", 50, 25);
+  &__container {
+  }
+
+  &__content {
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 32, 28);
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 40, 30);
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+    @include adaptiveValue("font-size", 24, 18);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 30);
+    }
+  }
+}
