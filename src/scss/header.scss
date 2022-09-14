@@ -1,5 +1,14 @@
 //====================================================================================================
 
+.tel {
+  @include adaptiveValue("font-size", 20, 13);
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: $violetColor;
+    }
+  }
+}
 
 .header {
   position: fixed;
@@ -35,7 +44,7 @@
         color: $violetColor;
       }
     }
-    @include adaptiveValue("font-size", 30, 20);
+    @include adaptiveValue("font-size", 30, 15);
     letter-spacing: 0.27rem;
 
     img {
@@ -150,9 +159,11 @@
     &:hover {
       transition: 1s ease-in-out;
       background: $violetColor;
+
       span {
         color: $whiteColor;
       }
+
       border: rem(2) solid $violetColor;
 
       svg {
