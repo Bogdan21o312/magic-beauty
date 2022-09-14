@@ -248,3 +248,26 @@
     }
   }
 }
+
+//====================================================================================================
+
+.brand {
+  @include adaptiveValue("margin-top", 50, 25);
+  @include adaptiveValue("margin-bottom", 50, 25);
+  &__title {
+    @include adaptiveValue("font-size", 32, 28);
+    text-align: center;
+    &:not(:last-child) {
+      @include adaptiveValue("margin", 50, 30);
+    }
+  }
+
+  &__slider {
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+  }
+}
