@@ -99,7 +99,9 @@
   }
 }
 .column-first {
-  &__txt {
+  @media (max-width: em(912)) {
+  }
+    &__txt {
     text-align: right;
     @media (max-width: em(912)) {
       text-align: center;
@@ -186,6 +188,35 @@
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 10, 5);
     }
+  }
+}
+
+//====================================================================================================
+
+.works {
+  @include adaptiveValue("margin-top", 50, 25);
+  @include adaptiveValue("margin-bottom", 50, 25);
+  &__container {
+  }
+
+  &__content {
+  }
+
+  &__title {
+    text-align: center;
+    @include adaptiveValue("font-size", 32, 28);
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 40, 20);
+    }
+  }
+
+  &__items {
+  }
+
+  &__item {
+  }
+
+  &__image {
   }
 }
 
