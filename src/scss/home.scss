@@ -1,7 +1,7 @@
 //====================================================================================================
 
 .services {
-
+  @include adaptiveValue("margin-bottom", 50, 25);
   &__container {
   }
 
@@ -9,6 +9,7 @@
     @include adaptiveValue("font-size", 30, 20);
     text-align: center;
     @include adaptiveValue("margin-bottom", 50, 20);
+    font-weight: bold;
   }
 
   &__gallery {
@@ -39,12 +40,12 @@
 
     &_txt {
       position: absolute;
-      bottom: 0;
+      bottom: rem(10);
       text-align: center;
     }
 
     img {
-      box-shadow: 0 rem(20) rem(40) rgba(0, 0, 0, 0.18);
+      box-shadow: 0 rem(20) rem(40) rgba(0, 0, 0, 0.07);
       @media (any-hover: hover) {
         &:hover {
           transform: scale(1.01);
@@ -69,6 +70,122 @@
 
   &__sub-title {
     @include adaptiveValue("font-size", 25, 15);
+  }
+}
+
+//====================================================================================================
+
+.why {
+  @include adaptiveValue("margin-top", 50, 25);
+  @include adaptiveValue("margin-bottom", 50, 25);
+  &__container {
+  }
+
+  &__content {
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: center;
+    @include adaptiveValue("column-gap", 30, 10);
+    row-gap: rem(10);
+    @media (max-width: em(912)){
+        flex-direction: column-reverse;
+    }
+  }
+
+  &__column {
+    @include adaptiveValue("font-size", 24, 18);
+  }
+}
+.column-first {
+  &__txt {
+    text-align: right;
+    @media (max-width: em(912)) {
+      text-align: center;
+    }
+      &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 70, 30);
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 30, 24);
+    font-weight: bold;
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 20, 10);
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 10, 5);
+    }
+  }
+}
+.column-center {
+  border: rem(1) solid $mainColor;
+  @include adaptiveValue("padding-top", 50, 30);
+  @include adaptiveValue("padding-bottom", 50, 30);
+  @include adaptiveValue("padding-right", 50, 30);
+  @include adaptiveValue("padding-left", 50, 30);
+  
+  &__title {
+    @include adaptiveValue("font-size", 32, 26);
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 50, 30);
+    }
+  }
+
+  &__image {
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 200, 30);
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  &__txt {
+
+    &_title {
+      @include adaptiveValue("font-size", 30, 24);
+      font-weight: bold;
+      &:not(:last-child) {
+          @include adaptiveValue("margin-bottom", 30, 15);
+      }
+      span {
+        color: $violetColor;
+      }
+    }
+
+    &_sub-title {
+      &:not(:last-child) {
+          @include adaptiveValue("margin-bottom", 30, 20);
+      }
+    }
+  }
+}
+.column-left {
+  &__txt {
+    text-align: center;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 70, 30);
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 30, 24);
+    font-weight: bold;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 10);
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 10, 5);
+    }
   }
 }
 
